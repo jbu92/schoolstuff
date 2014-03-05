@@ -1,0 +1,36 @@
+5
+111
+Ford
+Red
+24999.00
+3
+Air Conditioning
+XM Radio
+Leather Seats
+222
+Volvo
+White
+42999.00
+2
+Child Seats
+17" wheels
+333
+Honda
+Silver
+19999.00
+1
+Tinted Windows
+444
+Chevrolet
+Green
+23500.00
+0
+555
+Chrysler Motor Car
+Light Blue
+27450.00
+4
+Alloy Wheels
+Air Conditioning
+Roof Top Carrier
+Remote Car Starter

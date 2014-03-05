@@ -1,0 +1,18 @@
+Paul McCartney
+40.0 15.00
+George Ivan Morrison
+32.0 12.52
+Jim Morrison
+8.5 7.25
+Mick Jagger
+36.0 25.00
+Roger Dalty
+31.5 22.06
+Jimmy Page
+16.5 18.50
+Don Henley
+28.75 22.95
+Eric Clapton
+4.0 7.25
+Steven Tyler
+40.0 25.00

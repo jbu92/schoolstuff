@@ -1,0 +1,22 @@
+3              # number of vehicles
+111            # start of first vehicle
+Ford
+Red
+24999.00
+3              # number of accessories for 1st vehicle
+Air Conditioning
+XM Radio
+Leather Seats
+222            # start of 2nd vehicle
+Volvo
+White
+42999.00
+2              # number of accessories for 2nd vehicle
+Child Seats
+17" wheels
+333            # start of 3rd vehicle
+Honda
+Silver
+19999.00
+1              # number of accessories for 3rd vehicle
+Tinted Windows

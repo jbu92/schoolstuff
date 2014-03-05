@@ -1,0 +1,62 @@
+5
+car
+11111
+Ford
+Fusion FWD
+Red
+24999.00
+3
+AC
+795.00
+XM
+295.00
+Leather Seats
+495.00
+20
+28
+car
+22222
+Volvo
+V70 FWD
+White
+42999.00
+2
+Child Seats
+198.00
+17" wheels
+698.00
+14
+22
+car
+33333
+Honda
+Accord
+Silver
+19999.00
+1
+Tinted Windows
+175.00
+22
+31
+truck
+44444
+Freightliner
+FLD SD
+Red
+119999.00
+1
+Detroit Diesel Series 60
+4999.00
+10 speed manual
+455
+truck
+55555
+Mack
+TerraPro Cabover MRU612
+White
+125000.00
+1
+Dual Air Brake System
+6000.00
+8 speed manual
+325
