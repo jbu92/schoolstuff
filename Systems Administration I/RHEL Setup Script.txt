@@ -1,0 +1,132 @@
+#!/bin/bash
+#(mostly) By Jim Haight
+#RUN ME AS ROOT
+ 
+##
+##VARIABLES
+##
+SCSI="" #2k12 box
+DNS=""  #2k8box
+MYSELF="" #RHEL box
+ADDOMAIN="" #your own ad domain name
+RHELKEY="" #your key from redhat.rit.edu
+ 
+read -p "If you've had errors, something's wrong with the quotation marks, the encoding, or the #! line. Fix that NOW"
+read -p "This script is running as $(whoami). If that isn't root, you're gonna have a bad time."
+clear
+read -p "This script does just about everything. You are responsible for knowing what it doesn't do, and doing those things. You are also responsible for knowing how to do all of this should the script go awry. Good luck, --Jim"
+clear
+ 
+#ntp
+service ntpd stop
+ntpdate ntp.rit.edu
+service ntpd start
+ 
+#activation
+hostname sys1practical
+curl -k 'https://redhat.rit.edu/pub/bootstrap.sh' > bootstrap.sh
+chmod 755 bootstrap.sh
+./bootstrap.sh $RHELKEY
+ 
+#package management
+yum remove samba* -y
+yum install samba4 samba4-client -y
+ 
+#dns stuff
+cp /etc/named.conf ~/named.conf
+sed -i "19i    forwarders {$DNS;};" /etc/named.conf
+service named restart
+echo "nameserver $DNS" >> /etc/resolv.conf
+echo "zone "$ADDOMAIN" IN {
+	type slave;
+	file "$ADDOMAIN.dns";
+	masters {$DNS;};
+};
+" >> /etc/named.conf
+rndc reload
+
+	
+ 
+read -p "NEXT BIT IS ISCSI, SO HAVE THAT READY"
+ 
+#iscsi stuff
+yum install scsi* -y
+BIG=`iscsiadm --mode discovery -t sendtargets --portal $SCSI| grep linux`
+SMALL=`echo $BIG | cut -d' ' -f 2`
+iscsiadm --mode node --targetname $SMALL --portal $SCSI --login
+echo "Setting up /dev/sdb1"
+echo "n
+p
+1
+ 
+ 
+w
+" | fdisk /dev/sdb
+mkfs.ext2 /dev/sdb1
+echo "UUID=$(blkid /dev/sdb1 | cut -d'"' -f 2) /mnt/data ext2 _netdev,rw 0 0" >> /etc/fstab
+mkdir /mnt/data
+mount -a -O _netdev
+chmod 777 /mnt/data
+ 
+#samba stuff
+SAMBA="[global]
+log file = /var/log/samba/log.%m
+cups options = raw
+load printers = yes
+server string = RHELSAMBA
+socket options = TCP_NODELAY
+workgroup = $ADDOMAIN
+os level = 20
+null passwords = yes
+interfaces = lo eth1 127.0.0.0/24 $MYSELF/24
+hosts allow = 127. 192.
+encrypt passwords = yes
+security = user
+passdb backend = tdbsam
+max log size = 50
+wins support = true
+[iscsi]
+writeable = yes
+public = yes
+path = /mnt/data
+"
+mv /etc/samba/smb.conf ~/smb.conf.bak
+echo "$SAMBA" > /etc/samba/smb.conf
+service smb restart
+echo "netsys
+netsys
+" | pdbedit -a -u student
+ 
+#iptables config
+TABLECONFIG="-A INPUT -p udp -m udp -s 192.168.75.0/24 --dport 137 -j ACCEPT\\
+-A INPUT -p udp -m udp -s 192.168.75.0/24 --dport 138 -j ACCEPT\\
+-A INPUT -m state --state NEW -m tcp -p tcp -s 192.168.75.0/24 --dport 139 -j ACCEPT\\
+-A INPUT -m state --state NEW -m tcp -p tcp -s 192.168.75.0/24 --dport 445 -j ACCEPT\\
+-A INPUT -p udp -m udp --dport 137 -j ACCEPT\\
+-A INPUT -p udp -m udp --dport 138 -j ACCEPT\\
+-A INPUT -p tcp -m tcp --dport 514 -j ACCEPT\\
+-A INPUT -p udp -m udp --dport 514 -j ACCEPT\\
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT\\
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT\\
+"
+cp /etc/sysconfig/iptables ~/iptables.bak
+sed -i "11i\ $TABLECONFIG" /etc/sysconfig/iptables
+service iptables restart
+ 
+#rsyslog config
+cp /etc/rsyslog.conf ~/rsyslog.conf.bak
+sed -i "20 i\\
+\$ModLoad imudp\\
+\$UDPServerRun 514\\
+\$ModLoad imtcp\\
+\$TCPServerRun 514\\
+" /etc/rsyslog.conf
+/etc/init.d/rsyslog restart
+ 
+echo "Go setup evtsys on both Windows machines"
+read -p "evtsys.exe -i -h $MYSELF then sc start EvtSys "
+echo "Ok, now, SNAPSHOT ALL OF THE THINGS"
+read -p "and then go do the security stuff."
+clear
+read -p "GET YO SIGNS OFF! CUZ YOU DONE!"
+read -p "you're welcome."
