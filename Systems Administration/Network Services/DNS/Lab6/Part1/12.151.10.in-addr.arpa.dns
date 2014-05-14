@@ -1,0 +1,11 @@
+$TTL 3600;
+@ 1D IN  SOA ns.myco.tam4185.com. root.myco.tam4185.tam4185.com. (
+	2013031701;
+	120;
+	60;
+	300;
+	60;
+)
+	IN NS ns.myco.tam4185.com;
+50.12.151.10.in-addr.arpa. IN PTR win2k3.myco.tam4185.com.
+201.12.151.10.in-addr.arpa. IN PTR win2k8.myco.tam4185.com.

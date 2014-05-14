@@ -1,0 +1,12 @@
+$TTL 3600;
+$ORIGIN 32/27.40.168.192.in-addr.arpa.
+32-27.40.168.192.in-addr.arpa. IN SOA ns.myco.tam4185.com. root.myco.tam4185.com. (
+	2013060405;
+	120;
+	60;
+	300;
+	60;
+)
+	NS	ns.myco.tam4185.com.;
+33	PTR	client1.theirco.tam4185.com.;
+35   	PTR	client2.theirco.tam4185.com.;

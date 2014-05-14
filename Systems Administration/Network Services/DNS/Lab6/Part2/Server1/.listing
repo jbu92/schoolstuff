@@ -1,0 +1,7 @@
+-r--r--r-- 1 ftp ftp             28 May 01  2013 0.0.127.in-addr.arpa.dns
+-r--r--r-- 1 ftp ftp            205 May 01  2013 11.151.10.in-addr.arpa.dns
+-r--r--r-- 1 ftp ftp            262 May 01  2013 12.151.10.in-addr.arpa.dns
+-r--r--r-- 1 ftp ftp           3048 May 01  2013 cache.dns
+-r--r--r-- 1 ftp ftp            429 May 01  2013 myco.tam4185.com.dns
+-r--r--r-- 1 ftp ftp            486 May 01  2013 named.conf
+-r--r--r-- 1 ftp ftp            400 May 01  2013 theirco.tam4185.com.dns

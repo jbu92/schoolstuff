@@ -1,0 +1,17 @@
+#
+# /etc/dhcpd.conf for primary DHCP server
+#
+
+ddns-update-style none;
+default-lease-time 1800;
+
+subnet 10.151.12.0 netmask 255.255.255.0 {}
+
+subnet 10.151.11.0 netmask 255.255.255.0 {
+  option routers 10.151.11.254;
+  option domain-name-servers 10.151.11.101, 129.21.3.17;
+
+  max-lease-time 1800;
+  range 10.151.11.100 10.151.11.199;
+   
+}

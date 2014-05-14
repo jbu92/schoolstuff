@@ -1,0 +1,23 @@
+$TTL 3600;
+
+@ 1D IN SOA ns.mgmt.myco.tam4185.com. root.myco.tam4185.com. (
+	2013060705;
+	120;
+	60;
+	300;
+	60;
+)
+
+	  IN NS  ns.mgmt.myco.tam4185.com.
+
+32-27.40.168.192.in-addr.arpa. IN NS ns.myco.tam4185.com.
+
+
+$GENERATE 32-62 $.40.168.192.in-addr.arpa. CNAME $.32-27.40.168.192.in-addr.arpa.
+
+$ORIGIN 168.192.in-addr.arpa.
+
+
+12.32	PTR	sales.theirco.tam4185.com.
+99.32	PTR	mgmt.theirco.tam4185.com.
+10.32	PTR	human-resources.theirco.tam4185.com.

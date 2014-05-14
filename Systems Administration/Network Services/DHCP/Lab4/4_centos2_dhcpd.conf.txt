@@ -1,0 +1,42 @@
+#
+# DHCP Server Configuration file.
+#   see /usr/share/doc/dhcp*/dhcpd.conf.sample  
+#
+ddns-update-style interim;
+
+default-lease-time 21600;
+option domain-name "MAUL2.labs";
+option domain-name-servers 10.151.11.101, 129.21.3.17;
+failover peer "dhcp-failover"{
+	secondary;
+	address 10.151.12.202;
+	port 519;
+	peer address 10.151.12.101;
+	peer port 520;
+	max-response-delay 10;
+	max-unacked-updates 2;
+	
+}
+
+subnet 10.151.12.0 netmask 255.255.255.0 {
+	option routers 10.151.12.254;
+	option subnet-mask 255.255.255.0;
+	pool{
+		failover peer "dhcp-failover";
+		deny dynamic bootp clients;
+		range 10.151.12.120 10.151.12.140;
+	}
+	
+}
+subnet 10.151.11.0 netmask 255.255.255.0 {
+        option routers 10.151.11.254;
+        option subnet-mask 255.255.255.0;
+	pool{
+		failover peer "dhcp-failover";
+		deny dynamic bootp clients;
+       		range 10.151.11.40 10.151.11.42;
+       		range 10.151.11.46 10.151.11.60;
+	}
+
+}
+

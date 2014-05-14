@@ -1,0 +1,15 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+theirco.tam4185.com	IN SOA	w2k8001. hostmaster. (
+				5          ; serial
+				900        ; refresh (15 minutes)
+				600        ; retry (10 minutes)
+				86400      ; expire (1 day)
+				3600       ; minimum (1 hour)
+				)
+			NS	w2k8001.
+$ORIGIN theirco.tam4185.com.
+hr			CNAME	human-resources
+human-resources		A	192.168.32.10
+mgmt			A	192.168.32.99
+sales			A	192.168.32.12

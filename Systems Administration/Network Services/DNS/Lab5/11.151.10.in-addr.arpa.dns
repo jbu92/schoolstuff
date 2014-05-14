@@ -1,0 +1,11 @@
+$TTL 3600;
+@ 1D IN SOA ns.myco.tam4185.com. root.myco.tam4185.com. (
+	2013031701;
+	120;
+	60;
+	300;
+	60;
+)
+	IN NS ns.myco.tam4185.com.
+100 IN PTR winxp.myco.tam4185.com.
+101 IN PTR centos.myco.tam4185.com.

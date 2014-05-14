@@ -1,0 +1,16 @@
+$TTL 3600;
+
+mgmt.myco.tam4185.com. SOA ns.mgmt.myco.tam4185.com. root.myco.tam4185.com. (
+	2013050101;
+	120;
+	60;
+	300;
+	60;
+)
+
+	IN NS ns.mgmt.myco.tam4185.com.;
+ns	IN CNAME centos;
+centos	IN A	 10.151.12.103; 
+ghost1 	IN A	 10.151.11.110;
+ghost2	IN CNAME server.mgmt.myco.tam4185.com;
+server	IN A	 10.151.11.120;

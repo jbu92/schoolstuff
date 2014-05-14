@@ -1,0 +1,17 @@
+$TTL 3600;
+myco.tam4185.com. SOA ns.myco.tam4185.com. root.myco.tam4185.com. (
+	2013031701;
+	120;
+	60;
+	300;
+	60;
+)
+	IN NS ns.myco.tam4185.com;
+ns	IN CNAME centos;
+2k8 	IN CNAME win2k8;
+2k3 	IN CNAME win2k3;
+xp 	IN CNAME winxp;
+centos 	IN A 	10.151.11.101;
+winxp 	IN A 	10.151.11.100;
+win2k3 	IN A 	10.151.12.50;
+win2k8 	IN A 	10.151.12.201;

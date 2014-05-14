@@ -1,0 +1,12 @@
+$TTL 3600;
+
+@ 1D IN SOA ns.mgmt.myco.tam4185.com. tyler.gmail.com. (
+	2013050101;
+	120;
+	60;
+	300;
+	60;
+)
+
+	  IN NS  ns.mgmt.myco.tam4185.com.;
+1.0.0.127 IN PTR localhost;
