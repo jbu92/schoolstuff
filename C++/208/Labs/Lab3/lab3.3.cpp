@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: Rayno Niemi
+//Author: Jim Haight
 //Lab 3
 //Program: lab3ex1.cpp
 //Purpose: Read in the data for a stock including name, symbol, cost per share

@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: James Haight
+//Author: Jim Haight
 //Assignment: Project 4
 //Purpose: GAMBLIN'!
 //More seriously, for throwing this up on GitHub, Project 4 simulated a game of craps.

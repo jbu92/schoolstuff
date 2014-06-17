@@ -1,6 +1,6 @@
 /*
 Course: 4002-208
-Author: James Haight
+Author: Jim Haight
 Assignment: Project1
 Purpose: Calculate annual fuel costs
 Caveats:

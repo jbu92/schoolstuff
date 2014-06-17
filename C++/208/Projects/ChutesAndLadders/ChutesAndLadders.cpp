@@ -1,6 +1,6 @@
 /*Ident header
 //Course: 4002-208
-//Author: Team 18
+//Author: Jim Haight & team
 //Assignment: Chutes and Ladders
 //Purpose: Estimate time to play chutes and ladders
 //Caveats: Doesn't work so well for huge numbers of games, due to variable rollover (really peeved me before I figured that out...)

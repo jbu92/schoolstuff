@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: James Haight (aka group 8)
+//Author: Jim Haight (aka group 8)
 //Assignment: Chutes'n'Ladders
 //Purpose:
 //Caveats:

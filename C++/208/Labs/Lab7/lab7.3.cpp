@@ -1,5 +1,6 @@
 /*Course: 4002-208
-//Author: Rayno Niemi (James Haight Modified)
+//Author: James Haight
+//Derivative of: Rayno Niemi
 //Starting Program of Lab 7
 //Name: Lab7Ex1.cpp
 //Purpose: Compute the hourly wage of an employee.  No overtime

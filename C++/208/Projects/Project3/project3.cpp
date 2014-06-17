@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: James Haight
+//Author: Jim Haight
 //Assignment: Project 3
 //Purpose: "Project 3 extends Project 2 by allowing more options in the input, validating the input, and printing thetime in minutes and seconds when the time is large"
 //Caveats: Incorrect input types can result in infinite loops

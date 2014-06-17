@@ -1,6 +1,6 @@
 //*********************************************************************
 // FILE NAME:  washer.cpp
-// AUTHOR: 	              <--ENTER YOUR NAME HERE!
+// AUTHOR: Jim Haight	              <--ENTER YOUR NAME HERE!
 // Lab 1
 // Exercise 1
 // DESCRIPTION: Compute and print the area of a washer to

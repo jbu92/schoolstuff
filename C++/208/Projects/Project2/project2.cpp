@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: James Haight
+//Author: Jim Haight
 //Assignment: Project 2
 //Purpose: "Write programs to calculate the time to transmit information over a communication line"
 //Caveats: 

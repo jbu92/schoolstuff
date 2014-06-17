@@ -1,6 +1,6 @@
 /*Ident header
 //Course: 4002-208
-//Author: James Haight
+//Author: Jim Haight
 //Assignment:
 //Purpose:
 //Caveats:

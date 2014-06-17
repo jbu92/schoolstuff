@@ -4,7 +4,7 @@
 //*** PROGRAM:          Average Speed                                 ***//
 //*** NAME:             avgSpeed.cpp                                  ***//
 //*** LAB:              5                                             ***//
-//*** WRITTEN BY:       Rayno Niemi                                   ***//
+//*** WRITTEN BY:       Jim Haight                                    ***//
 //***                                                                 ***//
 //*** DESCRIPTION:      This program calculates the average speed of  ***//
 //***                   a motor vehicle traveling from the city of    ***//

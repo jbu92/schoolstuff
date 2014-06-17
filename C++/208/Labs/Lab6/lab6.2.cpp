@@ -1,5 +1,5 @@
 //4002-208
-//Author: James Haight
+//Author: Jim Haight
 //Lab 6
 //Topic: Functions
 //File: area.cpp

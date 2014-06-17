@@ -1,6 +1,6 @@
 //Course: 4002-208
-//Author: 
-//Assignment:
+//Author: Jim Haight
+//Assignment: Lab 2
 //Purpose:.
 //Caveats:
 

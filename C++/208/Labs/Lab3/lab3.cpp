@@ -1,5 +1,5 @@
 //Course: 4002-208
-//Author: 
+//Author: Jim Haight
 //Assignment:
 //Purpose:.
 //Caveats:

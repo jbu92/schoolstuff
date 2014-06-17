@@ -1,5 +1,6 @@
 //Course: 4002-208
-//Author: Rayno Niemi
+//Author: Jim Haight
+//Derivative of: Rayno Niemi
 //Header file for myInput.h
 
 #include <string>
