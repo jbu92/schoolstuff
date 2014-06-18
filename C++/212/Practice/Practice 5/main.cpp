@@ -1,6 +1,6 @@
 /*
 IDENT HEADER
-Author: James Haight
+Author: Jim Haight
 Class: 4002-212
 Assignment: Practice 5
 */

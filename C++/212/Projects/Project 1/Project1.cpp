@@ -1,6 +1,6 @@
 /*Ident header
 //Course: 4002-212
-//Author: James Haight
+//Author: Jim Haight
 */
 #include <iostream>
 

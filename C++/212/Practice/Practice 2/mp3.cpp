@@ -1,5 +1,5 @@
 //IDENT HEADER
-//NAME: James Haight
+//NAME: Jim Haight
 //CLASS: 4002-212
 //Purpose: Modifies mp3 track info
 
