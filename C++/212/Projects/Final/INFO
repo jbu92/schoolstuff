@@ -1,0 +1,36 @@
+This was a group project, and served as the practical portion of our final exam. The assignment was as follows (extracted from assignment document):
+
+	Task: 
+	Create a SMTP mail server and an SMTP mail client.
+	Server Objectives: 
+	Using C++, sockets, threading, and the Simple Mail Transport Protocol (SMTP), create a server program. 
+
+	The server will:
+	Spawn a new thread each time a connection is received from an SMTP client. Each thread will carry on a SMTP protocol conversation with the client program. When the SMTP protocol conversation with a client has completed, the thread will exit; note that the server still runs and waits for new connections. This thread will place the received message into a message buffer.  Messages will be placed in the buffer at the end of the buffer; this is a FIFO queue. 
+	Provide a thread that reads messages in the message buffer, and:
+	If the message is for a user of this server, moves the message from the message buffer into a file for the recipient of the message.  You will need a list of users(teammates) authorized to receive messages on this server. Each user of this server will have their own message file. New messages will be added to the end of the file.
+	If the message is not destined for a user of this server, the server will send the message to the next server in its server list, but not to the server from which it received the message.
+	This thread must conduct the same SMTP protocol conversation that a client has with a server.
+	Messages will be removed from the queue in FIFO order(first in, first out).
+	Maintain a list of servers to which this server can relay messages. For this exercise the relay list is comprised of machines in the Projects lab. 
+
+	Client Objectives: 
+	Using C++, "sockets", and the Simple Mail Transport Protocol (SMTP), create a client program that will contact an SMTP server to send a text email message. 
+	Your client program should provide some type of user interface(see below). The user must be able to enter the following information:
+	"from" email address
+	"to" email address
+	SMTP server address, for example, mail.rit.edu or 127.0.0.1(this would mean there is an SMTP server running on your machine)
+	The message
+
+	Your program must implement a successful dialog with an SMTP server. Your program must display the entire sequence of dialog messages between the client and the server. 
+	Your program must catch SMTP error codes and display the error code to the user with a brief message about the meaning of the error code.  An SMTP error code is any code other than 220, 221, 250, 251, 252, and 354. You should implement the following error codes:  421(Service Not Available), 447(Outgoing message timeout), and 500(Command Syntax Error).
+	Your program must be able to communicate with both simple and extended SMTP servers. You are not required to implement SMTP AUTH or TLS for this project.
+
+	Client User Interface
+	The user interface may be as simple as a command line dialog, or as complex as a GUI. 
+	
+	MRP - POP3 being outside the scope of the project assigned, our class developed a spec for a "Mail Retreival Protocol" in order to allow clients to retrieve messages from servers.
+
+The client portion of this project is what I was tasked to create.
+The server portion was put together by the other two members of my group. As such, it is presented for reference only, and does not come with the same license assigned to my own work as presented in the readme.
+The client is built to work on Windows, and the server is built to run on *nix.
