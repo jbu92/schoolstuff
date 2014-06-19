@@ -1,7 +1,7 @@
 /*
 IDENT HEADER
 Author: Jim Haight
-Class: 4002-212
+Class: 4050-212
 Assignment: Practice 5
 */
 #include <cstdlib>

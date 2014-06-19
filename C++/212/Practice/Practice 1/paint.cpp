@@ -1,5 +1,5 @@
 /*Ident header
-//Course: 4002-212
+//Course: 4050-212
 //Author: Jim Haight
 */
 

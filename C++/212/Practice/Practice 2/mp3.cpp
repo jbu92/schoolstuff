@@ -1,6 +1,6 @@
 //IDENT HEADER
 //NAME: Jim Haight
-//CLASS: 4002-212
+//CLASS: 4050-212
 //Purpose: Modifies mp3 track info
 
 #include <iostream>
